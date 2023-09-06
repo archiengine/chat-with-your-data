@@ -27,7 +27,8 @@ pinecone.init(api_key=os.environ["PINECONE_API_KEY"],
                 environment=os.environ["PINECONE_ENVIRONMENT"])
 embedding = OpenAIEmbeddings()
 # Initialize Pinecone index
-index = pinecone.Index(index_name="test-index")
+indexName = os.environ["PINECONE_INDEX_NAME"]
+index = pinecone.Index(index_name=indexName)
 vectordb = Pinecone(index=index, embedding=embedding, text_key="text")
 
 # vectordb.add_documents(splits) # only need to run this once!

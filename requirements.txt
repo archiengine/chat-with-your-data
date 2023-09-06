@@ -1,6 +1,6 @@
-langchain
-pinecone-client
-python-dotenv
-pypdf
-openai
-tiktoken
+langchain==0.0.281
+pinecone-client==2.2.2
+python-dotenv==1.0.0
+pypdf==3.15.5
+openai==0.28.0
+tiktoken==0.4.0
